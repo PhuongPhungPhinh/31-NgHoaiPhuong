@@ -23,7 +23,14 @@ def print_student_list():
 
 def search_student(search_name):
     ### VIẾT CODE CỦA BẠN VÀO ĐÂY ###
-    pass
+    print("--- KET QUA TIM KIEM ---")
+    found = False
+    for s in student_list:
+        if search_name.lower() in s["name"].lower():
+            print(f" - Ten: {s['name']}, Nam sinh: {s['year_of_birth']}, Dia chi: {s['address']}")
+            found = True
+    if not found:
+        print("Khong tim thay sinh vien nao.")
 
 if __name__ == "__main__":
     print("--- CHUONG TRINH QUAN LY SINH VIEN ---")
